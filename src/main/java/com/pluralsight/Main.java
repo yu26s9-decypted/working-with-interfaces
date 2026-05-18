@@ -1,3 +1,4 @@
+import com.pluralsight.Helpers.FormatHelpers;
 import com.pluralsight.model.Person;
 
 public static void main(String[] args){
@@ -8,6 +9,27 @@ public static void main(String[] args){
     connections.add(new Person("Michael", "Brown", 22));
     connections.add(new Person("Emily", "Davis", 30));
     connections.add(new Person("David", "Wilson", 41));
+    connections.add(new Person("Emily", "Aer", 20));
+    connections.add(new Person("Sarah", "Johnson", 18));
 
-    System.out.println(connections);
+
+    connections.sort(Person::compareTo);
+
+
+
+
+    System.out.println("//");
+    for(Person p : connections){
+        FormatHelpers.formatHelperConnection(p);
+
+    }
+
+
+
+
+
+
+
+
+
 }

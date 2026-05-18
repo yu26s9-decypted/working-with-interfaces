@@ -1,9 +1,20 @@
 package com.pluralsight.model;
 
-public class Person {
+import java.util.Comparator;
+
+public class Person implements Comparable<Person> {
     String firstName;
     String lastName;
     int age;
+
+
+   public int compareTo(Person p){
+       return this.lastName.compareTo(p.lastName);
+   }
+
+
+
+
 
     public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
